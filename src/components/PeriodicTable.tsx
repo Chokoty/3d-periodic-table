@@ -41,8 +41,8 @@ export default function PeriodicTable({
   const pillars = [];
   const maxHeight = Math.max(...heightData.map((v) => v || 0));
 
-  for (let i = 0; i < placement.length; i++) {
-    for (let j = 0; j < placement[i].length; j++) {
+  for (let i = 0; i < placement.length; i++) {                                  // BaseBoard + Pillars 만들어주는 부분
+    for (let j = 0; j < placement[i].length; j++) {                             // 전체 placement(위치)에 따라서 AtomData에서 데이터 바인딩
       const number = placement[i][j];
       if (number !== 0) {
         const atom = atomData[number - 1];
@@ -53,8 +53,8 @@ export default function PeriodicTable({
           0.01
         );
 
-        const style =
-          height === undefined
+        const style =                                                           // Pillar 스타일 적용 부분
+          height === undefined                                                  // 높이 없으면(group:none) 기본값
             ? { color: "#ff6b6b", opacity: 0.5 }
             : styler(atom, height, maxHeight);
 
@@ -64,7 +64,7 @@ export default function PeriodicTable({
             atom={atom}
             position={[j - 8.5, 0.5, i - 5.7]}
             height={realHeight}
-            style={style}
+            style={style}                                                       // 스타일 지정
             envMap={envMap}
             onClick={() => onClickPillar(atom)}
           />
