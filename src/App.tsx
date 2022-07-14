@@ -4,15 +4,15 @@ import {
   OrbitControls,
   PerspectiveCamera,
   useCubeTexture,
-} from "@react-three/drei";
+} from "@react-three/drei";             
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
-import blue from "@material-ui/core/colors/blue";
+import blue from "@material-ui/core/colors/blue";                   // 패키지 : react, three.js-fiber, drei, mui(UI)
 
-import PeriodicTable from "./components/PeriodicTable";
-import AtomInfo from "./types/AtomInfo";
-import AtomInfoBoard from "./components/AtomInfoBoard";
+import PeriodicTable from "./components/PeriodicTable";             // ptable 관련 컴포넌트
+import AtomInfo from "./types/AtomInfo";                            // atom 정보(타입, elements 들 정의)
+import AtomInfoBoard from "./components/AtomInfoBoard";             // atom 상세정보 팝업 컴포넌트
 
-import Control from "./components/Control";
+import Control from "./components/Control";                         
 import categories from "./components/Control/categories";
 import stylers, {
   Config,
